@@ -3,7 +3,7 @@ AR ?= ar
 
 OGG_OUTDIR ?= $(shell find $(OUT_DIR)/../.. -name 'ogg-*' '(' -type d -or -type l ')')/out
 
-CFLAGS += -Iinclude $(patsubst %,-I%/include,$(OGG_OUTDIR)) -O2 -fPIC
+CFLAGS += -Iinclude $(patsubst %,-I%/include,$(OGG_OUTDIR)) -O2 -fPIC -L /usr/local/lib -I /usr/local/include
 
 VORBIS_SRC = \
 	$(addprefix lib/,\
